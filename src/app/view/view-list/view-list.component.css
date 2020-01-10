@@ -1,0 +1,18 @@
+.main-table {
+  text-align: center;
+  padding: 10px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.form-container >* {
+  padding: 5px;
+  width: 100%;
+}
+.mat-label {
+  padding: 20px;
+}
+
