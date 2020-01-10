@@ -34,7 +34,7 @@
     Reset
   </button>
 
-  <button class="button-02" mat-raised-button type="submit" [disabled]="scheduleForm.form.invalid" mat-button>
+  <button class="button-02" mat-raised-button type="submit" [disabled]="scheduleForm.form.invalid" mat-button (click)="scheduleForm.reset()">
     Submit
   </button>
 </form>

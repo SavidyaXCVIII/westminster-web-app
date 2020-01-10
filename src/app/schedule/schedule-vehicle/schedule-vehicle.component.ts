@@ -30,9 +30,11 @@ export class ScheduleVehicleComponent implements OnInit {
       response => {
         console.log('Schedule added successfully');
         console.log(response);
+        this.schedule = new Schedule();
       },
       error => {
         console.log(error);
+        this.schedule = new Schedule();
       });
   }
 

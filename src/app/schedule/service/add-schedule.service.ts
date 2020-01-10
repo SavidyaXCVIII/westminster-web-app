@@ -10,7 +10,7 @@ export class AddScheduleService {
   readonly ROOT_URL = 'http://localhost:8080';
 
   addSchedule(schedule: Schedule): Observable<Schedule> {
-    return this.http.post<Schedule>(this.ROOT_URL + '/schedule', schedule, httpOptions)
+    return this.http.post<Schedule>(this.ROOT_URL + '/schedule', schedule, httpOptions);
   }
 
   constructor(private http: HttpClient) {
