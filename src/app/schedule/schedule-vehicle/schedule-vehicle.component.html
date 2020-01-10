@@ -22,9 +22,9 @@
 
     <mat-form-field>
       <mat-label>Cars</mat-label>
-      <mat-select required [(ngModel)]="schedule.vehiclePlateNumber" name="selectCar" #selectedVehicle="ngModel">
-        <mat-option *ngFor="let vehicle of vehicles  | async" [value]="vehicle.plateId">Make - {{vehicle.make}} |
-          Plate Number - {{vehicle.plateNumber}} </mat-option>
+      <mat-select required [(ngModel)]="schedule.plateId" name="selectCar" #selectedVehicle="ngModel">
+        <mat-option *ngFor="let vehicle of vehicles  | async" [value]="vehicle.plateId">Make - {{vehicle.brand}} |
+          Plate Number - {{vehicle.plateId}} </mat-option>
       </mat-select>
       <mat-error *ngIf="!selectedVehicle.selected">Name is invalid and required</mat-error>
     </mat-form-field>

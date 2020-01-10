@@ -16,16 +16,19 @@ export class ViewListComponent implements OnInit {
   vehicles: any;
   dataSource: any;
 
-  displayedColumns: string[] =[];
+  displayedColumns: string[] =['plateId','brand', 'noOfDoors','doorType','color'];
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   getVehicles(){
     return this.http.get(this.URL + '/vehicles');
   }
-  ngOnInit() {
-    this.getVehicles().subscribe(response => {
 
+  ngOnInit() {
+    console.log('Initialization of view list');
+    this.getVehicles().subscribe(response => {
+      console.log('This is getting vehicles subscribed');
       this.vehicles = response;
+      console.log(this.vehicles);
       this.dataSource = new MatTableDataSource(this.vehicles);
       this.dataSource.sort = this.sort;
     });

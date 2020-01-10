@@ -5,6 +5,8 @@ import { ViewRoutingModule } from './view-routing.module';
 import { ViewListComponent } from './view-list/view-list.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import {MatTableModule} from "@angular/material/table";
     CommonModule,
     ViewRoutingModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule,
+    MatInputModule
   ]
 })
 export class ViewModule { }

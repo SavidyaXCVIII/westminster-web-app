@@ -1,5 +1,5 @@
 export class Schedule {
-  vehiclePlateNumber: string;
+  plateId: string;
   pickUpDate: string;
   dropOffDate: string;
 }

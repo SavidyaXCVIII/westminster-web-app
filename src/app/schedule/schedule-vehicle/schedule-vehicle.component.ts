@@ -25,7 +25,7 @@ export class ScheduleVehicleComponent implements OnInit {
   }
 
   onSubmit() {
-
+    console.log('Schedule', this.schedule);
     this.addScheduleService.addSchedule(this.schedule).subscribe(
       response => {
         console.log('Schedule added successfully');
@@ -38,6 +38,7 @@ export class ScheduleVehicleComponent implements OnInit {
 
   getVehicles() {
     this.vehicles = this.http.get(this.URL + '/vehicles');
+    console.log('Vehicle List', this.vehicles);
   }
 
   date = new FormControl(new Date());
